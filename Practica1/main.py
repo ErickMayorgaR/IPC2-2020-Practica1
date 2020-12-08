@@ -4,15 +4,18 @@ from CalcularInfo import*
 manejador = ManejaInfo()
 
 def lectura_archivo():
-    print("Ingrese la dirección del Archivo")
-    direccion = input()
-    print(direccion)
-    file = open(direccion,'r', encoding='utf-8')
+    #print("Ingrese la dirección del Archivo")
+    #direccion = input()
+    #print(direccion)
+    #file = open(direccion,'r', encoding='utf-8')
+
+    file = open("C:/Users/emayo/OneDrive/Desktop/Practica1/IPC2/Practica1/Archivo.csv", 'r', encoding='utf-8')
     datos = file.read()
     manejador.manejador(datos)
 
 
 def calcular_datos():
+    manejador.separarcarreras()
 
     print("algo")
 
