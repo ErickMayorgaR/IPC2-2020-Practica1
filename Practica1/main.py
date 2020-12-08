@@ -1,36 +1,27 @@
-from tkinter import filedialog
-from tkinter import *
-from CargarArchivo import *
+from CalcularInfo import*
 
 
-ir_seleccion = ArchivoCarga()
-
+manejador = ManejaInfo()
 
 def lectura_archivo():
-    print("Ingrese el Nombre del Archivo")
-    nombre = input()
-
-    direccion = nombre + ".csv"
-
-
-
+    print("Ingrese la dirección del Archivo")
+    direccion = input()
+    print(direccion)
     file = open(direccion,'r', encoding='utf-8')
-    print(file)
+    datos = file.read()
+    manejador.manejador(datos)
 
-    info = file.read()
-    print (info)
 
 def calcular_datos():
-    ir_seleccion.tokens_errores()
+
     print("algo")
 
 
-
 def crearJSON():
-    print(algo)
+    print("algo")
 
 def salida():
-    sys.exit(0)
+    exit()
 
 def opciones():
     print("\n")
