@@ -2,15 +2,18 @@ import json
 
 class ManejaInfo:
     carreras = []
-
     solicitudes = []
     una_linea = []
     diccionarios = []
 
     def almacenardatosJSON(self):
-        with open ('C:/Users/emayo/OneDrive/Desktop/Practica1/IPC2/Practica1/Resultados.json','w', encoding= 'utf-8') as file:
+        with open ('Resultados.json','w', encoding= 'utf-8') as file:
             json.dump(self.diccionarios, file, indent = 4)
             file.close()
+        self.carreras = []
+        self.solicitudes = []
+        self.una_linea = []
+        self.diccionarios = []
 
     def creadiccionarioscarrera(self, nombre):
         nocandidatos = 0

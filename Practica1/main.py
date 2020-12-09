@@ -4,6 +4,7 @@ from CalcularInfo import*
 manejador = ManejaInfo()
 
 def lectura_archivo():
+
     print("Ingrese la dirección del Archivo")
     direccion = input()
 
@@ -13,14 +14,21 @@ def lectura_archivo():
     manejador.manejador(datos)
 
 
-def calcular_datos():
-    manejador.separarcarreras()
 
-    print("algo")
+def calcular_datos():
+    try:
+        manejador.separarcarreras()
+    except:
+        print("Por favor ingrese antes un archivo")
 
 
 def crearJSON():
-    manejador.almacenardatosJSON()
+    try:
+        manejador.almacenardatosJSON()
+
+    except:
+        print("Para este paso se necesita un archivo y sus calculos")
+
 
 def salida():
     exit()
